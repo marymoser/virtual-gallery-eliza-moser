@@ -1,2 +1,4 @@
 # tiff files
-.tiff
+*.tiff
+# thumbs
+Thumbs.db
