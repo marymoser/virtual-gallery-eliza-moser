@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.w3schools.com/lib/w3data.js"></script>
     <head>
-        <title>Stage | Eliza Moser Virtual Gallery</title>
+        <title>West Gallery | Eliza Moser Virtual Gallery</title>
+    		<script src="https://www.w3schools.com/lib/w3data.js"></script>
+    		<script src="script/createmap.js"></script>
     </head>
     <body>
         <!-- Navigation -->
@@ -17,37 +19,31 @@
           <a href="west-gallery.html" class="w3-button w3-bar-item">West Gallery</a>
         </nav>
 
-        <!-- Clickable Image Map -->
+        <!-- GALLERY -->
         <section id="map-container">
           <div id="inner">
                 <!-- Clickable image map -->
-                <img src="img/panos/pano_stage.jpg" alt="Stage" style="width:auto;height:450px" usemap="#stagemap">
+                <img src="img/panos/pano_stage.jpg" alt="Stage" style="width:auto; height:450px" usemap="#stagemap">
+                <map name="stagemap"></map>
 
-                <map name="stagemap">
-                    <!-- Left Panel -->
-					<area shape="rect" coords="488,49,603,137" alt="Mel" title="Mel" href="img/works/Mel.jpg" target="_blank">
-
-                    <!-- Left Easel -->
-                    <area shape="rect" coords="724,128,806,265" alt="Falco II" title="Falco II" href="img/works/Falco_II.jpg" target="_blank">
-                    <!-- Middle Panel -->
-                    <area shape="rect" coords="961,47,1032,132" alt="Portrait of the Artist, Age 21" title="Portrait of the Artist, Age 21" href="img/works/Self_Portrait_Age_21.jpg" target="_blank">
-                    <area shape="rect" coords="945,139,1047,227" alt="Terracotta and Green" title="Terracotta and Green" href="img/works/Terracotta_and_Green.jpg" target="_blank">
-                    <!-- Right Easel -->                <area shape="rect" coords="945,139,1047,227," alt="Terracotta and Green" title="Terracotta and Green" href="img/works/Terracotta_and_Green.jpg" target="_blank">
-                    <area shape="rect" coords="1170,149,1249,266" alt="Resting Figure" title="Resting Figure" href="img/works/Resting_Figure.jpg" target="_blank">
-                    <!-- Right Panel -->
-                </map>
-
+                <!-- Navigate to rest of gallery -->
                 <div class="arrow-nav">
                     <a class="w3-button w3-xlarge w3-circle w3-black nav-left" href="east-gallery.html" title="Go to East Gallery"><i class="fa fa-angle-left"></i></a>
                     <a class="w3-button w3-xlarge w3-circle w3-black nav-westfromstage" href="west-gallery.html" title="Go to West Gallery"><i class="fa fa-angle-up"></i></a>
                 </div>
           </div>
         </section>
-        
+
+        <!-- FOOTER -->
         <footer>
             <h2>Eliza's Virtual Gallery</h2>
             <p>Stage</p>
         </footer>
+
+        <!-- SCRIPTS -->
+        <script>
+          createMap();
+        </script>
 
     </body>
 </html>

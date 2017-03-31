@@ -1,12 +1,16 @@
+/*
+Areas for Image Maps
+*/
 var westMapSlices = {
-	map: [{
-			Title: "November Still Life",
+	map: [
+		{
 			Coords: "600,168,718,270",
+			Title: "November Still Life",
 			HRef: "img/works/November_Still_Life.jpg"
 		},
 		{
-			Title: "Gold and Blue",
 			Coords: "602,272,658,328",
+			Title: "Gold and Blue",
 			HRef: "img/works/Gold_and_Blue_WIP.jpg"
 		},
 		{
@@ -17,40 +21,30 @@ var westMapSlices = {
 }
 
 var eastMapSlices = {
-	map: [{
-			Title: "November Still Life",
-			Coords: "600,168,718,270",
-			HRef: "img/works/November_Still_Life.jpg"
-		},
+	map: [
 		{
-			Title: "Gold and Blue",
-			Coords: "602,272,658,328",
-			HRef: "img/works/Gold_and_Blue_WIP.jpg"
-		},
-		{
-			Coords: "663,272,721,328",
-			Title: "Highlights",
-			HRef: "img/works/Highlights.jpg"
+
 		}]
 }
 
 var stageMapSlices = {
-	map: [{
+	map: [
+		{
 			Coords: "488,49,603,137",
 			Title: "Mel",
 			HRef: "img/works/Mel.jpg"
 		},
 		{
-            Coords: "724,128,806,265",
+      Coords: "724,128,806,265",
 			Title: "Falco II",
 			HRef: "img/works/Falco_II.jpg"
-        },
+    },
 		{
 			Coords: "961,47,1032,132",
 			Title: "Portrait of the Artist, Age 21",
 			HRef: "img/works/Self_Portrait_Age_21.jpg"
 		},
-		{	
+		{
 			Coords: "945,139,1047,227",
 			Title: "Terracotta and Green",
 			HRef: "img/works/Terracotta_and_Green.jpg"
@@ -71,7 +65,8 @@ var stageMapSlices = {
 function createMap() {
 	console.log("Inside function");
 	// Figure out which gallery view this is
-	var mapName = document.getElementsByTagName("map")[0].getAttribute("name");
+	var mapTag = document.getElementsByTagName("map")[0];
+	var mapName = mapTag.getAttribute("name");
 	console.log("Name of image map is " + mapName);
 	var slices;
 	switch (mapName) {
@@ -83,14 +78,16 @@ function createMap() {
 			console.log("Build east gallery map");
 			slices = eastMapSlices;
 			break;
-		case "stage":
+		case "stagemap":
 			console.log("Build stage map");
 			slices = stageMapSlices;
 			break;
 		default:
 			slices = {};
+			console.log("ERROR: Invalid map");
+			return;
 	}
-	
+
 	// Create area tags from object
 	var i;
 	for (var i = 0; i < slices.map.length; i++) {
@@ -103,7 +100,7 @@ function createMap() {
 		newArea.setAttribute("title", artwork.Title);
 		newArea.setAttribute("href", artwork.HRef);
 		newArea.setAttribute("target", "_blank");
-		document.getElementById('westmapping').appendChild(newArea);
-		console.log(artwork);
+		console.log(newArea);
+		mapTag.appendChild(newArea);
 	}
 }
