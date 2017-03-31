@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="css/virtualtour.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+    <head>
+        <title>East Gallery | Eliza Moser Virtual Gallery</title>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="w3-bar w3-black">
+          <a href="index.html" class="w3-button w3-bar-item">Stage</a>
+          <a href="east-gallery.html" class="w3-button w3-bar-item">East Gallery</a>
+          <a href="west-gallery.html" class="w3-button w3-bar-item">West Gallery</a>
+        </nav>
+
+        <section id="map-container">
+             <div id="inner">
+                <!-- Clickable image map -->
+                <img src="img/panos/pano_carpet_large.jpg" alt="East Gallery" style="width:auto;height:450px" usemap="#eastmap">
+
+                <map name="eastmap">
+                </map>
+
+                <!-- Navigate to rest of gallery -->
+                <div class="arrow-nav">
+					<a class="w3-button w3-xlarge w3-circle w3-black nav-left" href="index.html" title="Go to Stage"><i class="fa fa-angle-left"></i></a>
+					<a class="w3-button w3-xlarge w3-circle w3-black nav-right" href="west-gallery.html" title="Go to West Gallery"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <h2>Eliza's Virtual Gallery</h2>
+            <p>East Gallery</p>
+        </footer>
+    </body>
+</html>

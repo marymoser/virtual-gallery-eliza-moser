@@ -1,0 +1,57 @@
+body {
+    background-color: #000000;
+}
+
+footer {
+    color:#fff;
+	padding-left: 20px;
+	padding-right:20px;
+	text-align: center;
+}
+
+.footerheading h1, .footerheading h2, .footerheading h3, .footerheading p {
+    
+	display: inline;
+}
+
+.footernotes {
+	color: #888888;
+}
+
+#map-container {
+    position: relative;
+    overflow-x:auto;
+    overflow-y:hidden;
+    background-color: #222222;
+}
+
+#inner {
+    position: relative;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    min-height:450px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.arrow-nav .w3-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-left {
+    left: 20px;
+    top: 70%;
+}
+
+.nav-right {
+    right: 20px;
+    top: 70%;
+}
+
+.nav-westfromstage {
+    left: 100px;
+    top: 50%;
+}
