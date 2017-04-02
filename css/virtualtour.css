@@ -10,7 +10,7 @@ footer {
 }
 
 .footerheading h1, .footerheading h2, .footerheading h3, .footerheading p {
-    
+
 	display: inline;
 }
 
@@ -54,4 +54,13 @@ footer {
 .nav-westfromstage {
     left: 100px;
     top: 50%;
+}
+
+#art-modal {
+  padding-top: 30px;
+}
+
+#art-modal .w3-modal-content {
+  max-width: 650px;
+  background-color: #222222;
 }

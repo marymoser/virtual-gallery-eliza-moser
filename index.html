@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link rel="stylesheet" href="css/virtualtour.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://www.w3schools.com/lib/w3data.js"></script>
-    <head>
-        <title>Stage | Eliza Moser Virtual Gallery</title>
-    		<script src="https://www.w3schools.com/lib/w3data.js"></script>
-    		<script src="script/createmap.js"></script>
+  <head>
+      <!-- INFO -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- TITLE -->
+      <title>Stage | Eliza Moser Virtual Gallery</title>
+
+      <!-- LINKS -->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/virtualtour.css">
+
+      <!-- SCRIPTS -->
+      <script src="https://www.w3schools.com/lib/w3data.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      <script src="script/createmap.js"></script>
     </head>
     <body>
         <!-- Navigation -->
@@ -26,12 +33,31 @@
                 <img src="img/panos/pano_stage.jpg" alt="Stage" style="width:auto; height:450px" usemap="#stagemap">
                 <map name="stagemap"></map>
 
+                <!-- Pop-up modal for displaying individual artwork -->
+                <div id="art-modal" class="w3-modal">
+                  <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+
+                    <div class="w3-center"><br>
+                      <!-- Close button -->
+                      <span onclick="document.getElementById('art-modal').style.display='none'" class="w3-button w3-large w3-hover-gray w3-display-topright" title="Close Display">&times;</span>
+                      <!-- Modal image -->
+                      <img src="img/works/Mel.jpg" alt="Sample Image" style="width:50%">
+                    </div>
+
+                    <!-- Modal text -->
+                    <div class="w3-container w3-border-top w3-padding-16 w3-gray">
+                      Mel
+                    </div>
+
+                  </div>
+                </div> <!-- end #art-modal -->
+
                 <!-- Navigate to rest of gallery -->
                 <div class="arrow-nav">
                     <a class="w3-button w3-xlarge w3-circle w3-black nav-left" href="east-gallery.html" title="Go to East Gallery"><i class="fa fa-angle-left"></i></a>
                     <a class="w3-button w3-xlarge w3-circle w3-black nav-westfromstage" href="west-gallery.html" title="Go to West Gallery"><i class="fa fa-angle-up"></i></a>
-                </div>
-          </div>
+                </div> <!-- end .arrow-nav -->
+          </div> <!-- end #inner -->
         </section>
 
         <!-- FOOTER -->
@@ -42,7 +68,7 @@
 
         <!-- SCRIPTS -->
         <script>
-          createMap();
+          initPage();
         </script>
 
     </body>

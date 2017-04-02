@@ -172,46 +172,53 @@ var westMapSlices = {
 	]
 }
 
+/* Initialize page */
+function initPage() {
+	// Populate image map
+	createMap();
+}
+
 /* Generate area tags for map */
 function createMap() {
 	console.log("Inside function");
 	// Figure out which gallery view this is
 	var mapTag = document.getElementsByTagName("map")[0];
 	var mapName = mapTag.getAttribute("name");
-	console.log("Name of image map is " + mapName);
+	console.log("Identified image map " + mapName);
 	var slices;
 	switch (mapName) {
 		case "stagemap":
-			console.log("Build stage map");
+			//console.log("Build stage map");
 			slices = stageMapSlices;
 			break;
 		case "eastmap":
-			console.log("Build east gallery map");
+			//console.log("Build east gallery map");
 			slices = eastMapSlices;
 			break;
 		case "westmap":
-			console.log("Build west gallery map");
+			//console.log("Build west gallery map");
 			slices = westMapSlices;
 			break;
 		default:
 			slices = {};
-			console.log("ERROR: Invalid map");
+			//console.log("ERROR: Invalid map");
 			return;
 	}
 
 	// Create area tags from object
 	var i;
 	for (var i = 0; i < slices.map.length; i++) {
-		console.log(i);
+		//console.log(i);
 		var artwork = slices.map[i];
-		console.log(artwork);
+		//console.log(artwork);
 		var newArea = document.createElement("AREA");
 		newArea.setAttribute("coords", artwork.Coords);
 		newArea.setAttribute("shape", "rect");
 		newArea.setAttribute("title", artwork.Title);
-		newArea.setAttribute("href", artwork.HRef);
-		newArea.setAttribute("target", "_blank");
-		console.log(newArea);
+		//newArea.setAttribute("href", artwork.HRef);
+		//newArea.setAttribute("target", "_blank");
+		newArea.setAttribute("onclick", "document.getElementById('art-modal').style.display='block'")
+		console.log("Create new area: " + newArea);
 		mapTag.appendChild(newArea);
 	}
 }
