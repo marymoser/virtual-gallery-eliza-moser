@@ -1,3 +1,5 @@
+var currentMap = {};
+
 /*
 Areas for Image Maps
 */
@@ -6,42 +8,42 @@ var stageMapSlices = {
 		{
 			Coords: "531,51,610,144",
 			Title: "Mel",
-			HRef: "img/works/Mel.jpg"
+			ImgLink: "img/works/Mel.jpg"
 		},
 		{
 			Coords: "526,148,613,257",
 			Title: "Cast of Michaelangelo",
-			HRef: "img/works/Michaelangelo.jpg"
+			ImgLink: "img/works/Michaelangelo.jpg"
 		},
 		{
       Coords: "757,133,844,278",
 			Title: "Falco II (figure study)",
-			HRef: "img/works/Falco_2.jpg"
+			ImgLink: "img/works/Falco_2.jpg"
     },
 		{
 			Coords: "1005,49,1080,139",
 			Title: "Portrait of the Artist, Age 21",
-			HRef: "img/works/Self_Portrait_Age_21.jpg"
+			ImgLink: "img/works/Self_Portrait_Age_21.jpg"
 		},
 		{
 			Coords: "989,144,1096,238",
 			Title: "Terracotta and Green",
-			HRef: "img/works/Terracotta_and_Green.jpg"
+			ImgLink: "img/works/Terracotta_and_Green.jpg"
 		},
 		{
 			Coords: "1224,155,1307,279",
 			Title: "Resting Figure",
-			HRef: "img/works/Resting_Figure.jpg"
+			ImgLink: "img/works/Resting_Figure.jpg"
 		},
 		{
 			Coords: "1447,40,1534,148",
 			Title: "Cast of Saint Theresa",
-			HRef: "img/works/Saint_Theresa.jpg"
+			ImgLink: "img/works/Saint_Theresa.jpg"
 		},
 		{
 			Coords: "1451,151,1530,254",
 			Title: "Portrait of Jothi",
-			HRef: "img/works/Jothi.jpg"
+			ImgLink: "img/works/Jothi.jpg"
 		}]
 }
 
@@ -51,73 +53,73 @@ var eastMapSlices = {
 		{
 			Coords: "118,195,216,392",
 			Title: "Shy Figure",
-			HRef: "img/works/Shy_Figure.jpg"
+			ImgLink: "img/works/Shy_Figure.jpg"
 		},
 		{
 			Coords: "263,203,346,298",
 			Title: "Portrait of an Italian Girl",
-			HRef: "img/works/Italian_Girl.jpg"
+			ImgLink: "img/works/Italian_Girl.jpg"
 		},
 		// Left red panel
 		{
 			Coords: "507,120,582,217",
 			Title: "The Muse",
-			HRef: "img/works/Muse.jpg"
+			ImgLink: "img/works/Muse.jpg"
 		},
 		{
 			Coords: "503,221,585,340",
 			Title: "Falco (figure study)",
-			HRef: "img/works/Falco_1.jpg"
+			ImgLink: "img/works/Falco_1.jpg"
 		},
 		// Dawn
 		{
 			Coords: "698,178,837,330",
 			Title: "Dawn",
-			HRef: "img/works/Dawn.jpg"
+			ImgLink: "img/works/Dawn.jpg"
 		},
 		// Right red panel
 		{
 			Coords: "965,120,1030,203",
 			Title: "Portrait of Elena",
-			HRef: "img/works/Elena.jpg"
+			ImgLink: "img/works/Elena.jpg"
 		},
 		{
 			Coords: "960,206,1037,306",
 			Title: "Alessio",
-			HRef: "img/works/Alessio.jpg"
+			ImgLink: "img/works/Alessio.jpg"
 		},
 		// Right standing easel
 		{
 			Coords: "1103,186,1212,383",
 			Title: "Seated Figure",
-			HRef: "img/works/Seated_Figure.jpg"
+			ImgLink: "img/works/Seated_Figure.jpg"
 		},
 		// Right Small Round Table
 		{
 			Coords: "1258,224,1333,340",
 			Title: "Echo (work-in-progress)",
-			HRef: "img/works/Echo_WIP.jpg"
+			ImgLink: "img/works/Echo_WIP.jpg"
 		},
 		// Right Large Table
 		{
 			Coords: "1523,199,1614,325",
 			Title: "Djole, or Portrait of Montenegrin Boy",
-			HRef: "img/works/Djole.jpg"
+			ImgLink: "img/works/Djole.jpg"
 		},
 		{
 			Coords: "1617,278,1686,378",
 			Title: "Olive Tree",
-			HRef: "img/works/Olive_Tree_Pencil.jpg"
+			ImgLink: "img/works/Olive_Tree_Pencil.jpg"
 		},
 		{
 			Coords: "1730,206,1809,320",
 			Title: "Untitled (figure study)",
-			HRef: "img/works/Figure_Study_1.jpg"
+			ImgLink: "img/works/Figure_Study_1.jpg"
 		},
 		{
 			Coords: "1816,254,1897,352",
 			Title: "Untitled (figure study)",
-			HRef: "img/works/Figure_Study_2.jpg"
+			ImgLink: "img/works/Figure_Study_2.jpg"
 		}]
 }
 
@@ -127,98 +129,141 @@ var westMapSlices = {
 		{
 			Coords: "166,124,308,302",
 			Title: "Grandpa",
-			HRef: "img/works/Grandpa.jpg"
+			ImgLink: "img/works/Grandpa.jpg"
 		},
 		// Left table
 		{
 			Coords: "364,213,448,315",
 			Title: "Cinderella",
-			HRef: "img/works/Cinderella.jpg"
+			ImgLink: "img/works/Cinderella.jpg"
 		},
 		// Gray panel, left side
 		{
 			Coords: "498,178,592,304",
 			Title: "Portrait of Marco",
-			HRef: "img/works/Marco.jpg"
+			ImgLink: "img/works/Marco.jpg"
 		},
 		// Gray panel, middle
 		{
 			Coords: "600,168,718,270",
 			Title: "November Still Life",
-			HRef: "img/works/November_Still_Life.jpg"
+			ImgLink: "img/works/November_Still_Life.jpg"
 		},
 		{
 			Coords: "602,272,658,328",
 			Title: "Gold and Blue",
-			HRef: "img/works/Gold_and_Blue_WIP.jpg"
+			ImgLink: "img/works/Gold_and_Blue_WIP.jpg"
 		},
 		{
 			Coords: "663,272,721,328",
 			Title: "Highlights",
-			HRef: "img/works/Highlights.jpg"
+			ImgLink: "img/works/Highlights.jpg"
 		},
 		// Gray panel, right side
 		{
 			Coords: "727,156,794,349",
 			Title: "Standing Figure",
-			HRef: "img/works/Standing_Figure.jpg"
+			ImgLink: "img/works/Standing_Figure.jpg"
 		},
 		// Right table
 		{
 			Coords: "830,205,915,317",
 			Title: "The Artist's Boot",
-			HRef: "img/works/Artist_Boot.jpg"
+			ImgLink: "img/works/Artist_Boot.jpg"
 		}
 	]
 }
 
 /* Initialize page */
 function initPage() {
+	// Identify image map
+	setThisMap();
 	// Populate image map
 	createMap();
 }
 
 /* Generate area tags for map */
 function createMap() {
-	console.log("Inside function");
+	console.log("Creating image map...");
+
+	// Create area tags from object
+	var i;
+	for (var i = 0; i < currentMap.length; i++) {
+		var artwork = currentMap[i];
+		var newArea = document.createElement("AREA");
+
+		// Set attributes
+		newArea.setAttribute("shape", "rect");
+		newArea.setAttribute("coords", artwork.Coords);
+		newArea.setAttribute("title", artwork.Title);
+		//newArea.setAttribute("href", artwork.ImgLink);
+		//newArea.setAttribute("target", "_blank");
+
+		// Add event listeners
+		if (newArea.addEventListener) { // For all major browsers, except IE 8 and earlier
+    	newArea.addEventListener("click", function() { showModal(this) });
+		} else if (newArea.attachEvent) { // For IE 8 and earlier versions
+			newArea.attachEvent("onclick", function() { showModal(this) });
+		}
+
+		// Add new area tag into map
+		console.log("Create new area: " + newArea);
+		document.getElementsByTagName("map")[0].appendChild(newArea);
+	}
+}
+
+function setThisMap() {
 	// Figure out which gallery view this is
-	var mapTag = document.getElementsByTagName("map")[0];
-	var mapName = mapTag.getAttribute("name");
+	var mapName = document.getElementsByTagName("map")[0].getAttribute("name");
 	console.log("Identified image map " + mapName);
 	var slices;
 	switch (mapName) {
 		case "stagemap":
 			//console.log("Build stage map");
-			slices = stageMapSlices;
+			currentMap = stageMapSlices.map;
 			break;
 		case "eastmap":
 			//console.log("Build east gallery map");
-			slices = eastMapSlices;
+			currentMap = eastMapSlices.map;
 			break;
 		case "westmap":
 			//console.log("Build west gallery map");
-			slices = westMapSlices;
+			currentMap = westMapSlices.map;
 			break;
 		default:
-			slices = {};
-			//console.log("ERROR: Invalid map");
+			console.log("ERROR: Invalid map");
+			currentMap = {};
 			return;
 	}
+	console.log("Current map set");
+}
 
-	// Create area tags from object
+/* Click event for image area */
+function showModal(areaElement) {
+	console.log("Clicked on area");
+	console.log(areaElement);
+
+	// Identify image
 	var i;
-	for (var i = 0; i < slices.map.length; i++) {
-		//console.log(i);
-		var artwork = slices.map[i];
-		//console.log(artwork);
-		var newArea = document.createElement("AREA");
-		newArea.setAttribute("coords", artwork.Coords);
-		newArea.setAttribute("shape", "rect");
-		newArea.setAttribute("title", artwork.Title);
-		//newArea.setAttribute("href", artwork.HRef);
-		//newArea.setAttribute("target", "_blank");
-		newArea.setAttribute("onclick", "document.getElementById('art-modal').style.display='block'")
-		console.log("Create new area: " + newArea);
-		mapTag.appendChild(newArea);
+	var artwork = {};
+	for(i = 0; i < currentMap.length; i++) {
+		if(currentMap[i].Coords === areaElement.getAttribute("coords")) {
+			console.log("Found artwork");
+			console.log(currentMap[i]);
+			artwork = currentMap[i];
+			break;
+		}
 	}
+
+	// Set modal image
+	var imgTag = document.getElementById("art-modal-img");
+	imgTag.setAttribute("src", artwork.ImgLink);
+	imgTag.setAttribute("alt", artwork.Title);
+	imgTag.setAttribute("title", artwork.Title);
+	
+	// Set modal text
+	document.getElementById("art-modal-text").innerHTML = artwork.Title;
+
+	// Display modal
+	document.getElementById('art-modal').style.display='block';
 }
