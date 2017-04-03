@@ -1,6 +1,7 @@
-# tiff files
+# Large image files
 *.tiff
-# thumbs
+*hi_res.jpg
+# Thumbs
 Thumbs.db
 # debugging files
 debug.html
