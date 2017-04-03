@@ -1,22 +1,29 @@
+/* Basic sections */
+
 body {
     background-color: #000000;
 }
 
-footer {
-    color:#fff;
+#pagetext {
+  color:#fff;
 	padding-left: 20px;
 	padding-right:20px;
+  padding-bottom: 24px;
 	text-align: center;
 }
 
-.footerheading h1, .footerheading h2, .footerheading h3, .footerheading p {
+#pagetext h1, #pagetext h2, #pagetext h3, #pagetext p {
+	display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
 
-	display: inline;
 }
 
-.footernotes {
+.howtonotes {
 	color: #888888;
 }
+
+/* Image map */
 
 #map-container {
     position: relative;
@@ -34,6 +41,8 @@ footer {
     margin-left:auto;
     margin-right:auto;
 }
+
+/* Map navigation arrows */
 
 .arrow-nav .w3-button {
     position: absolute;
@@ -56,11 +65,27 @@ footer {
     top: 50%;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+}
+
+footer {
+  background-color: #222;
+  color:#888;
+}
+
+/* Image modals */
+
 #art-modal {
   padding-top: 30px;
+
 }
 
 #art-modal .w3-modal-content {
-  max-width: 650px;
+  /*max-width: 650px;*/
   background-color: #222222;
+}
+
+#art-modal #art-modal-text {
 }
