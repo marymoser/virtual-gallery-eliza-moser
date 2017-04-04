@@ -4,6 +4,10 @@ body {
     background-color: #000000;
 }
 
+body, html {
+  height: 100%;
+}
+
 #pagetext {
   color:#fff;
 	padding-left: 20px;
@@ -71,8 +75,8 @@ footer {
 }
 
 footer {
-  background-color: #222;
-  color:#888;
+  /*background-color: #222;
+  color:#888;*/
 }
 
 /* Image modals */
@@ -88,4 +92,17 @@ footer {
 }
 
 #art-modal #art-modal-text {
+}
+
+.bgimg {
+    /* The image used */
+    background-image: url("../img/works/Terracotta_and_Green.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
