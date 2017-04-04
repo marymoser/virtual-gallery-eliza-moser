@@ -1,9 +1,11 @@
-var currentMap = {};
+var currentPage = {};
 
 /*
 Areas for Image Maps
 */
-var stageMapSlices = {
+var stageElements = {
+	pageTitle: "Stage",
+
 	map: [
 		{
 			Coords: "531,51,610,144",
@@ -47,7 +49,9 @@ var stageMapSlices = {
 		}]
 }
 
-var eastMapSlices = {
+var eastElements = {
+	pageTitle: "East Gallery",
+
 	map: [
 		// Left standing easels
 		{
@@ -123,7 +127,9 @@ var eastMapSlices = {
 		}]
 }
 
-var westMapSlices = {
+var westElements = {
+	pageTitle: "West Gallery",
+
 	map: [
 		// Left red panel
 		{
@@ -176,10 +182,51 @@ var westMapSlices = {
 
 /* Initialize page */
 function initPage() {
-	// Identify image map
-	setThisMap();
+	// Identify page by image map
+	setPageByMap();
+	// Change title
+	setTitle(currentPage.pageTitle);
+	// Change page name heading
+	setPageName();
 	// Populate image map
 	createMap();
+}
+
+/* Identify page by map tag */
+function setPageByMap() {
+	// Figure out which gallery view this is
+	var mapName = document.getElementsByTagName("map")[0].getAttribute("name");
+	console.log("Identified image map " + mapName);
+	var slices;
+	switch (mapName) {
+		case "stagemap":
+			//console.log("Build stage map");
+			currentPage = stageElements;
+			break;
+		case "eastmap":
+			//console.log("Build east gallery map");
+			currentPage = eastElements;
+			break;
+		case "westmap":
+			//console.log("Build west gallery map");
+			currentPage = westElements;
+			break;
+		default:
+			console.log("ERROR: Invalid map");
+			currentPage = {};
+			return;
+	}
+	console.log("Current map set");
+}
+
+/* Set title page of page */
+function setTitle(newTitle) {
+	document.getElementsByTagName('title')[0].innerHTML = newTitle + " | Eliza Moser's Virtual Gallery";
+}
+
+function setPageName() {
+	var title = currentPage.pageTitle;
+	document.getElementById("pagename").innerHTML = title.toUpperCase();
 }
 
 /* Generate area tags for map */
@@ -188,6 +235,7 @@ function createMap() {
 
 	// Create area tags from object
 	var i;
+	var currentMap = currentPage.map;
 	for (var i = 0; i < currentMap.length; i++) {
 		var artwork = currentMap[i];
 		var newArea = document.createElement("AREA");
@@ -196,8 +244,6 @@ function createMap() {
 		newArea.setAttribute("shape", "rect");
 		newArea.setAttribute("coords", artwork.Coords);
 		newArea.setAttribute("title", artwork.Title);
-		//newArea.setAttribute("href", artwork.ImgLink);
-		//newArea.setAttribute("target", "_blank");
 
 		// Add event listeners
 		if (newArea.addEventListener) { // For all major browsers, except IE 8 and earlier
@@ -212,32 +258,6 @@ function createMap() {
 	}
 }
 
-function setThisMap() {
-	// Figure out which gallery view this is
-	var mapName = document.getElementsByTagName("map")[0].getAttribute("name");
-	console.log("Identified image map " + mapName);
-	var slices;
-	switch (mapName) {
-		case "stagemap":
-			//console.log("Build stage map");
-			currentMap = stageMapSlices.map;
-			break;
-		case "eastmap":
-			//console.log("Build east gallery map");
-			currentMap = eastMapSlices.map;
-			break;
-		case "westmap":
-			//console.log("Build west gallery map");
-			currentMap = westMapSlices.map;
-			break;
-		default:
-			console.log("ERROR: Invalid map");
-			currentMap = {};
-			return;
-	}
-	console.log("Current map set");
-}
-
 /* Click event for image area */
 function showModal(areaElement) {
 	console.log("Clicked on area");
@@ -246,6 +266,7 @@ function showModal(areaElement) {
 	// Identify image
 	var i;
 	var artwork = {};
+	var currentMap = currentPage.map;
 	for(i = 0; i < currentMap.length; i++) {
 		if(currentMap[i].Coords === areaElement.getAttribute("coords")) {
 			console.log("Found artwork");
@@ -260,7 +281,7 @@ function showModal(areaElement) {
 	imgTag.setAttribute("src", artwork.ImgLink);
 	imgTag.setAttribute("alt", artwork.Title);
 	imgTag.setAttribute("title", artwork.Title);
-	
+
 	// Set modal text
 	document.getElementById("art-modal-text").innerHTML = artwork.Title;
 
