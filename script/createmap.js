@@ -85,7 +85,7 @@ var eastElements = {
 		{
 			Coords: "965,120,1030,203",
 			Title: "Portrait of Elena",
-			ImgLink: "img/works/Elena.jpg"
+			ImgLink: "img/works/Elena.JPG"
 		},
 		{
 			Coords: "960,206,1037,306",
@@ -135,7 +135,7 @@ var westElements = {
 		{
 			Coords: "166,124,308,302",
 			Title: "Grandpa",
-			ImgLink: "img/works/Grandpa.jpg"
+			ImgLink: "img/works/Grandpa.JPG"
 		},
 		// Left table
 		{
