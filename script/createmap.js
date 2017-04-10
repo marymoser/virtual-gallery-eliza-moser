@@ -85,7 +85,7 @@ var eastElements = {
 		{
 			Coords: "965,120,1030,203",
 			Title: "Portrait of Elena",
-			ImgLink: "img/works/Elena.JPG"
+			ImgLink: "img/works/Elena.jpg"
 		},
 		{
 			Coords: "960,206,1037,306",
@@ -108,7 +108,7 @@ var eastElements = {
 		{
 			Coords: "1523,199,1614,325",
 			Title: "Djole, or Portrait of Montenegrin Boy",
-			ImgLink: "img/works/Djole.jpg"
+			ImgLink: "img/works/Montenegrin_Boy.jpg"
 		},
 		{
 			Coords: "1617,278,1686,378",
