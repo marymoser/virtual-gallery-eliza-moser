@@ -2,6 +2,6 @@
 *.tiff
 *hi_res.jpg
 # Thumbs
-Thumbs.db
+*Thumbs.db
 # debugging files
 debug.html
