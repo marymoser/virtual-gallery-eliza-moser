@@ -1,7 +1,7 @@
 /* Basic sections */
 
 body {
-    background-color: #000000;
+    /*background-color: #000000;*/
 }
 
 body, html {
@@ -108,7 +108,7 @@ footer {
 
 .bgimg {
     /* The image used */
-    background-image: url("../img/works/November_Still_Life.jpg");
+    background-image: url("../img/works/Terracotta_and_Green.jpg");
 
     /* Full height */
     height: 100%;
