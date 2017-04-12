@@ -114,7 +114,7 @@ footer {
 .bgimg {
     background-color: #000;
     /* The image used */
-    background-image: url("../img/works/Artist_Boot.jpg");
+    background-image: url("../img/works/Artist_Boot_Cropped2.jpg");
 
     /*width:100%;*/
 
@@ -122,7 +122,7 @@ footer {
     height: 100%;
 
     /* Center and scale the image nicely */
-    background-position: center center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: lighten;
