@@ -106,9 +106,17 @@ footer {
 #art-modal #art-modal-text {
 }
 
+.heroimg {
+  max-width: 100%;
+  height: auto;
+}
+
 .bgimg {
+    background-color: #000;
     /* The image used */
-    background-image: url("../img/works/Terracotta_and_Green.jpg");
+    background-image: url("../img/works/Artist_Boot.jpg");
+
+    /*width:100%;*/
 
     /* Full height */
     height: 100%;
