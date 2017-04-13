@@ -8,6 +8,27 @@ body, html {
   height: 100%;
 }
 
+.active {
+  background-color: #222;
+}
+
+ul.horizontal-list li {
+  display: block;
+  padding-right:10px;
+  border-right: 1px solid #fff;
+}
+
+ul.horizontal-list li:last-child {
+  border-right: 0px;
+  padding-right:inherit;
+}
+
+@media only screen and (min-width: 480px) {
+  ul.horizontal-list li {
+    display: inline;
+  }
+}
+
 
 /*************************************************************************************/
 /** SCROLLBAR: Removed for now. Research shows users confused without arrow button ***/
@@ -81,7 +102,7 @@ body::-webkit-scrollbar-button, #map-container::-webkit-scrollbar-button {
   border-right: 0px;
 }
 
-@media screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
 
   #pagetext .heading-item {
     display: inline-block;
