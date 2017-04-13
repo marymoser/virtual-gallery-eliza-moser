@@ -164,25 +164,57 @@ footer {
 /* Image modals */
 
 #art-modal {
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  /*padding-bottom: 10px;*/
 
 }
 
 #art-modal #art-modal-dialog {
   /*max-width: 650px;*/
-  /*background-color: #222222;*/
 
 }
+
 
 #art-modal-dialog .art-modal-img-container {
-  overflow-y:scroll;
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 125px);
 }
 
-/*#art-modal-img {
-  max-height: calc(100vh - 200px);
-}*/
+@media only screen and (min-width:480px) {
+  #art-modal-dialog .art-modal-img-container {
+    overflow-y: scroll;
+  }
+}
+
+
+#art-modal-dialog-responsive {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+#art-modal-dialog-responsive .art-modal-img-container {
+}
+
+#art-modal-dialog #art-modal-img,
+#art-modal-dialog-responsive #art-modal-img {
+  width:100%
+}
+
+@media only screen and (min-width:480px) {
+  #art-modal-dialog #art-modal-img {
+    width:70%
+  }
+}
+
+@media only screen and (min-width:480px) {
+  #art-modal-dialog-responsive #art-modal-img {
+    max-height: calc(100vh - 125px);
+    width:auto;
+  }
+}
 
 .bgimg {
     /* The image used */
