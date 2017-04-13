@@ -55,6 +55,10 @@ body::-webkit-scrollbar-button, #map-container::-webkit-scrollbar-button {
 	background-color: #555;
 }*/
 
+/****************************************/
+/** PAGE TEXT: Underneath pano header ***/
+/****************************************/
+
 #pagetext {
   color:#fff;
 	/*padding-left: 20px;
@@ -86,10 +90,6 @@ body::-webkit-scrollbar-button, #map-container::-webkit-scrollbar-button {
   #pagetext .heading-item:first-child {
     border-right: 1px solid #222;
   }
-}
-
-.howtonotes {
-	color: #888888;
 }
 
 /* Image map */
@@ -144,12 +144,14 @@ footer {
 
 #art-modal {
   padding-top: 30px;
+  padding-bottom: 10px;
 
 }
 
 #art-modal .w3-modal-content {
   /*max-width: 650px;*/
-  background-color: #222222;
+  /*background-color: #222222;*/
+  /*background-color: grey;*/
 }
 
 #art-modal #art-modal-text {
