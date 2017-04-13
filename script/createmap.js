@@ -230,7 +230,6 @@ function initPage() {
 function setPageByMap() {
 	// Figure out which gallery view this is
 	var mapName = document.getElementsByTagName("map")[0].getAttribute("name");
-	console.log("Identified image map " + mapName);
 	var slices;
 	switch (mapName) {
 		case "stagemap":
@@ -250,7 +249,6 @@ function setPageByMap() {
 			currentPage = {};
 			return;
 	}
-	console.log("Current map set");
 }
 
 /* Set title page of page */
@@ -265,7 +263,6 @@ function setPageName() {
 
 /* Generate area tags for map */
 function createMap() {
-	console.log("Creating image map...");
 
 	// Create area tags from object
 	var i;
@@ -287,15 +284,12 @@ function createMap() {
 		}
 
 		// Add new area tag into map
-		console.log("Create new area: " + newArea);
 		document.getElementsByTagName("map")[0].appendChild(newArea);
 	}
 }
 
 /* Click event for image area */
 function showModal(areaElement) {
-	console.log("Clicked on area");
-	console.log(areaElement);
 
 	// Identify image
 	var i;
@@ -303,9 +297,6 @@ function showModal(areaElement) {
 	var currentMap = currentPage.map;
 	for(i = 0; i < currentMap.length; i++) {
 		if(currentMap[i].Coords === areaElement.getAttribute("coords")) {
-			console.log("Found artwork");
-			console.log(currentMap[i]);
-			artwork = currentMap[i];
 			break;
 		}
 	}

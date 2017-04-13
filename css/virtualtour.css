@@ -169,14 +169,20 @@ footer {
 
 }
 
-#art-modal .w3-modal-content {
+#art-modal #art-modal-dialog {
   /*max-width: 650px;*/
   /*background-color: #222222;*/
-  /*background-color: grey;*/
+
 }
 
-#art-modal #art-modal-text {
+#art-modal-dialog .art-modal-img-container {
+  overflow-y:scroll;
+  max-height: calc(100vh - 200px);
 }
+
+/*#art-modal-img {
+  max-height: calc(100vh - 200px);
+}*/
 
 .bgimg {
     /* The image used */
