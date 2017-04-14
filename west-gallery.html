@@ -43,7 +43,7 @@
           </div> <!-- end .arrow-nav -->
 
           <!-- Pop-up modal for displaying individual artwork -->
-          <div id="art-modal" class="w3-modal" onclick="closeModal()">
+          <div id="art-modal" class="w3-modal" onclick="document.getElementById('art-modal').style.display='none'">
 
             <div id="art-modal-dialog-responsive" class="w3-modal-content w3-card-4 w3-animate-opacity">
 
@@ -51,7 +51,7 @@
               <header class="w3-container w3-border-bottom w3-light-grey">
                 <p id="art-modal-text"></p>
                 <!-- "X" button to close -->
-                <span onclick="closeModal()" class="w3-button w3-large w3-hover-black w3-display-topright" title="Close Display">&times;</span>
+                <span onclick="document.getElementById('art-modal').style.display='none'" class="w3-button w3-large w3-hover-black w3-display-topright" title="Close Display">&times;</span>
               </header>
 
               <!-- Modal image -->
@@ -61,7 +61,7 @@
 
               <footer class="w3-container w3-border-top w3-padding w3-light-grey">
                 <!-- Close button -->
-                <!--<span onclick="closeModal()" class="w3-button w3-large w3-dark-grey w3-hover-black w3-right" title="Close Display">
+                <!--<span onclick="document.getElementById('art-modal').style.display='none'" class="w3-button w3-large w3-dark-grey w3-hover-black w3-right" title="Close Display">
                       Close
                     </span> -->
               </footer>
