@@ -166,7 +166,6 @@ footer {
 #art-modal {
   padding-top: 20px;
   /*padding-bottom: 10px;*/
-
 }
 
 #art-modal header {
@@ -175,11 +174,11 @@ footer {
 
 #art-modal #art-modal-dialog {
   /*max-width: 650px;*/
-
 }
 
 #art-modal-dialog .art-modal-img-container {
   max-height: calc(100vh - 125px);
+  overflow-y: auto;
 }
 
 @media only screen and (min-width:480px) {
@@ -187,7 +186,6 @@ footer {
     overflow-y: scroll;
   }
 }
-
 
 #art-modal-dialog-responsive {
   height: -webkit-min-content;
@@ -199,6 +197,8 @@ footer {
 }
 
 #art-modal-dialog-responsive .art-modal-img-container {
+  align: center;
+  overflow-x: auto;
 }
 
 #art-modal-dialog #art-modal-img,
