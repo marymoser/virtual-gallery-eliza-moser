@@ -169,11 +169,14 @@ footer {
 
 }
 
+#art-modal header {
+  padding-right: 50px;
+}
+
 #art-modal #art-modal-dialog {
   /*max-width: 650px;*/
 
 }
-
 
 #art-modal-dialog .art-modal-img-container {
   max-height: calc(100vh - 125px);
