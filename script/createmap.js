@@ -294,8 +294,6 @@ function createMap() {
 
 /* Click event for image area */
 function showModal(areaElement) {
-	console.log("Clicked on area");
-	console.log(areaElement);
 
 	// Identify image
 	var i;
@@ -303,8 +301,6 @@ function showModal(areaElement) {
 	var currentMap = currentPage.map;
 	for(i = 0; i < currentMap.length; i++) {
 		if(currentMap[i].Coords === areaElement.getAttribute("coords")) {
-			console.log("Found artwork");
-			console.log(currentMap[i]);
 			artwork = currentMap[i];
 			break;
 		}
@@ -341,4 +337,14 @@ function getModalText(index) {
 	modalText += ", " + artwork.Medium;
 
 	return modalText;
+}
+
+/* Event triggered by close modal action */
+function closeModal() {
+	artModal = document.getElementById('art-modal');
+
+	// Remove attributes in CURRENT modal
+
+	// Close the modal
+	this.artModal.style.display='none';
 }
