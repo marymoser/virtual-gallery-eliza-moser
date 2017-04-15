@@ -341,10 +341,13 @@ function getModalText(index) {
 
 /* Event triggered by close modal action */
 function closeModal() {
-	artModal = document.getElementById('art-modal');
-
+	console.log("Closing modal...");
 	// Remove attributes in CURRENT modal
+	imgTag = document.getElementById('art-modal-img');
+	imgTag.removeAttribute("src");
+	imgTag.removeAttribute("alt");
+	imgTag.removeAttribute("title");
 
 	// Close the modal
-	this.artModal.style.display='none';
+	document.getElementById('art-modal').style.display='none';
 }
