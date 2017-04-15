@@ -29,6 +29,10 @@ ul.horizontal-list li:last-child {
   }
 }
 
+a, area {
+  cursor: pointer;
+}
+
 
 /*************************************************************************************/
 /** SCROLLBAR: Removed for now. Research shows users confused without arrow button ***/
