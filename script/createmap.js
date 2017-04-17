@@ -100,7 +100,7 @@ var eastElements = {
 		{
 			Coords: "965,120,1030,203",
 			Title: "Portrait of Elena",
-			ImgLink: "img/works/Portrait_Elena.jpg",
+			ImgLink: "img/works/Elena.jpg",
 			Medium: "Oil on Canvas"
 		},
 		{
@@ -188,7 +188,7 @@ var westElements = {
 		{
 			Coords: "602,272,658,328",
 			Title: "Gold and Blue",
-			ImgLink: "img/works/Gold_and_Blue_WIP.jpg",
+			ImgLink: "img/works/Gold_and_Blue.jpg",
 			Medium: "Oil on Canvas"
 		},
 		{
